@@ -1,0 +1,30 @@
+'fileTypes': [
+  'hamlet'
+]
+'name': 'HTML (Hamlet)'
+'patterns': [
+  {
+    'include': 'text.html.basic'
+  }
+  {
+    'include': '#interpolated_haskell'
+  }
+]
+'repository':
+  'interpolated_haskell':
+    'patterns': [
+      {
+        'begin': '[#@^]\\{'
+        'captures':
+          '0':
+            'name': 'entity.name.tag.hamlet'
+        'end': '\\}'
+        'name': 'meta.tag.template.hamlet'
+        'patterns': [
+          {
+            'include': 'source.haskell'
+          }
+        ]
+      }
+    ]
+'scopeName': 'text.html.hamlet'

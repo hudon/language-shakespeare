@@ -1,0 +1,30 @@
+'fileTypes': [
+  'lucius'
+]
+'name': 'CSS (Lucius)'
+'patterns': [
+  {
+    'include': 'source.css'
+  }
+  {
+    'include': '#interpolated_haskell'
+  }
+]
+'repository':
+  'interpolated_haskell':
+    'patterns': [
+      {
+        'begin': '[#@^]\\{'
+        'captures':
+          '0':
+            'name': 'entity.name.tag.lucius'
+        'end': '\\}'
+        'name': 'meta.tag.template.lucius'
+        'patterns': [
+          {
+            'include': 'source.haskell'
+          }
+        ]
+      }
+    ]
+'scopeName': 'source.css.lucius'
