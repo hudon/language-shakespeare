@@ -14,7 +14,7 @@
   'interpolated_haskell':
     'patterns': [
       {
-        'begin': '\\#\\{'
+        'begin': '[#@^]\\{'
         'captures':
           '0':
             'name': 'entity.name.tag.julius'
