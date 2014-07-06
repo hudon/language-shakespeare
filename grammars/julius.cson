@@ -4,20 +4,27 @@
 'name': 'Javascript (Julius)'
 'patterns': [
   {
-    'begin': '\\{\\{!'
-    'end': '\\}\\}'
-    'name': 'comment.block.mustache'
-  }
-  {
-    'begin': '\\{\\{[{<>#^/]?'
-    'captures':
-      '0':
-        'name': 'entity.name.tag.mustache'
-    'end': '\\}?\\}\\}'
-    'name': 'meta.tag.template.mustache'
-  }
-  {
     'include': 'source.js'
   }
+  {
+    'include': '#interpolated_haskell'
+  }
 ]
+'repository':
+  'interpolated_haskell':
+    'patterns': [
+      {
+        'begin': '\\#\\{'
+        'captures':
+          '0':
+            'name': 'entity.name.tag.julius'
+        'end': '\\}'
+        'name': 'meta.tag.template.julius'
+        'patterns': [
+          {
+            'include': 'source.haskell'
+          }
+        ]
+      }
+    ]
 'scopeName': 'source.js.julius'
