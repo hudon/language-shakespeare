@@ -1,0 +1,5 @@
+'.source.hamlet':
+    'text.html.hamlet':
+      'forall':
+        'prefix': 'fo'
+        'body': '$forall ${1:item} <- ${2:items}\n\t${3:body}'
