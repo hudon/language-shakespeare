@@ -1,0 +1,28 @@
+'.text.html.hamlet':
+    'Doctype':
+        'prefix': 'doc'
+        'body': '$doctype ${1:5}'
+    'For all':
+        'prefix': 'for'
+        'body': '$forall ${1:item} <- ${2:items}\n\t${3:body}'
+    'If else':
+        'prefix': 'if'
+        'body': '$if ${1:condition1}\n\t${2:body}\n$elseif ${3:condition2}\n\t${4:body}\n$else\n\t${5:body}'
+    'Maybe':
+        'prefix': 'may'
+        'body': '$maybe ${1:value} <- ${2:container}\n\t${3:just}\n$nothing\n\t${4:nothing}'
+    'Case':
+        'prefix': 'case'
+        'body': '$case ${1:value}\n\t$of ${2:pattern1}\n\t\t${3:body1}\n\t$of ${4:pattern2}\n\t\t${5:body2}'
+    'With':
+        'prefix': 'with'
+        'body': '$with ${1:value} <- ${2:expression}\n\t${3:body}'
+    '#':
+        'prefix': '#'
+        'body': '#{${1:value}}'
+    '@':
+        'prefix': '@'
+        'body': '@{${1:url}}'
+    '^':
+        'prefix': '^'
+        'body': '^{${1:widget}}'
