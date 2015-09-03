@@ -1,0 +1,30 @@
+'fileTypes': [
+  'cassius'
+]
+'name': 'CSS (Cassius)'
+'patterns': [
+  {
+    'include': 'source.css'
+  }
+  {
+    'include': '#interpolated_haskell'
+  }
+]
+'repository':
+  'interpolated_haskell':
+    'patterns': [
+      {
+        'begin': '[#@^]\\{'
+        'captures':
+          '0':
+            'name': 'entity.name.tag.cassius'
+        'end': '\\}'
+        'name': 'meta.tag.template.cassius'
+        'patterns': [
+          {
+            'include': 'source.haskell'
+          }
+        ]
+      }
+    ]
+'scopeName': 'source.css.cassius'
