@@ -1,6 +1,6 @@
 {
   "name": "language-shakespeare",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Atom language support for Yesod's Shakespeare templates (cassius, hamlet, julius, lucius)",
   "repository": "https://github.com/Hudon/language-shakespeare",
   "license": "MIT",
